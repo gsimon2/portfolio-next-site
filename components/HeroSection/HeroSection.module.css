@@ -1,0 +1,67 @@
+.container {
+   height: calc(100vh - 4rem);
+}
+
+.imageContainer {
+   border-radius: 50%;
+   background: blue;
+   aspect-ratio: 1;
+   box-sizing: border-box;
+   min-width: 10px;
+   min-height: 10px;
+   width: 100%;
+   overflow: hidden;
+   visibility: hidden;
+
+   @media (prefers-reduced-motion: no-preference) {
+      animation: circleGrow 0.25s ease-in 0.5s;
+      animation-fill-mode: forwards;
+   }
+
+   @media (prefers-reduced-motion: reduce) {
+      visibility: visible;
+      max-width: 30rem;
+   }
+}
+
+@keyframes circleGrow {
+   from {
+      visibility: visible;
+      max-width: 0rem;
+   }
+   to {
+      visibility: visible;
+      max-width: 30rem;
+   }
+}
+
+.avatar {
+   position: relative !important;
+   top: 100%;
+   visibility: hidden;
+
+   @media (prefers-reduced-motion: no-preference) {
+      animation: popUp 0.6s ease-in 0.75s;
+      animation-fill-mode: forwards;
+   }
+
+   @media (prefers-reduced-motion: reduce) {
+      visibility: visible;
+      top: 0%;
+   }
+}
+
+@keyframes popUp {
+   from {
+      visibility: visible;
+      top: 100%;
+   }
+   to {
+      visibility: visible;
+      top: 0%;
+   }
+}
+
+.grid {
+   height: 100%;
+}
