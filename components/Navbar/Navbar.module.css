@@ -1,0 +1,18 @@
+.navbar {
+   position: sticky;
+   top: 0;
+   container-type: inline-size;
+   background-color: var(--mantine-color-glass-1);
+}
+
+.group {
+   margin-inline: 5rem;
+
+   @container (max-width: 75em) {
+      margin-inline: 2rem;
+   }
+
+   @container (max-width: 36em) {
+      margin-inline: 1rem;
+   }
+}

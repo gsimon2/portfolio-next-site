@@ -1,0 +1,51 @@
+.container {
+   height: 100vh;
+}
+
+.imageContainer {
+   border-radius: 50%;
+   background: blue;
+   aspect-ratio: 1;
+   box-sizing: border-box;
+   min-width: 10px;
+   min-height: 10px;
+   width: 100%;
+   overflow: hidden;
+   visibility: hidden;
+   animation: circleGrow 0.25s ease-in 0.5s;
+   animation-fill-mode: forwards; 
+}
+
+@keyframes circleGrow {
+   from {
+      visibility: visible;
+      max-width: 0rem;
+   }
+   to {
+      visibility: visible;
+      max-width: 30rem;
+   }
+}
+
+.avatar {
+   position: relative !important;
+   top: 100%;
+   animation: popUp 0.5s ease-in 0.75s;
+   animation-fill-mode: forwards;  
+   visibility: hidden;
+}
+
+@keyframes popUp {
+   from {
+      visibility: visible;
+      top: 100%;
+   }
+   to {
+      visibility: visible;
+      top: 0%;
+   }
+}
+
+.grid {
+   height: 100%;
+}
