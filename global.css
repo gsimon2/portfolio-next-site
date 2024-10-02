@@ -1,0 +1,15 @@
+html {
+   scroll-behavior: smooth;
+}
+
+body {
+   background-color: black;
+}
+
+.targetOffset {
+   display: block;
+   position: relative;
+   top: -7rem;
+   visibility: hidden;
+   margin: 0;
+}

@@ -1,0 +1,38 @@
+.navbar {
+   position: sticky;
+   top: 0;
+   container-type: inline-size;
+   background-color: var(--mantine-color-glass-1);
+   backdrop-filter: blur(3px);
+   z-index: 40;
+   margin-bottom: 1rem;
+}
+
+.group {
+   margin-inline: 5rem;
+   min-height: 4rem;
+   list-style: none;
+   margin-block: 0;
+
+   @container (max-width: 75em) {
+      margin-inline: 2rem;
+   }
+
+   @container (max-width: 36em) {
+      margin-inline: 1rem;
+      padding: 0.5rem;
+   }
+}
+
+.anchor {
+   font-size: var(--mantine-font-size-xl);
+
+   &:hover {
+      box-shadow: 0 4px 0 0 var(--mantine-color-anchor);
+      text-decoration: none;
+   }
+}
+
+.achorActive {
+   box-shadow: 0 4px 0 0 var(--mantine-color-anchor);
+}

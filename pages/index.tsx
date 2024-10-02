@@ -1,9 +1,28 @@
-import { Button, Group } from "@mantine/core";
+import {
+   Button,
+   Center,
+   Container,
+   Group,
+   Paper,
+} from "@mantine/core";
+import HeroSection from "../components/HeroSection/HeroSection";
+import Navbar from "../components/Navbar/Navbar";
 
 export default function IndexPage() {
-  return (
-    <Group mt={50} justify="center">
-      <Button size="xl">Welcome to Mantine!</Button>
-    </Group>
-  );
+   return (
+      <>
+         <HeroSection />
+         <Navbar />
+         <Container h={5000}>
+            <Paper p="xl" withBorder>
+               <span id="about" className='targetOffset'></span>
+               <Center>
+                  <Group mt={50} justify="center">
+                     <Button size="xl">Welcome to Mantine!</Button>
+                  </Group>
+               </Center>
+            </Paper>
+         </Container>
+      </>
+   );
 }
