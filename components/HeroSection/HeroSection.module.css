@@ -18,7 +18,7 @@
 
 .imageContainer {
    border-radius: 50%;
-   background: blue;
+   background: var(--mantine-primary-color-filled);
    aspect-ratio: 1;
    box-sizing: border-box;
    min-width: 10px;

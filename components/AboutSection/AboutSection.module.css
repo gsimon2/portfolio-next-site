@@ -12,6 +12,12 @@
    @media (prefers-reduced-motion: reduce) {
       opacity: 1;
    }
+
+   /* @media (prefers-reduced-motion: no-preference) {
+      &:hover {
+         transform: scale(1.1);
+      }
+   } */
 }
 
 .skillAppear {
