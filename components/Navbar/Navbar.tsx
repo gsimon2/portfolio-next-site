@@ -9,7 +9,7 @@ import { useScrollspy } from "../../utils/hooks/useScrollSpy";
 const Navbar: React.FC = () => {
    const [elements, setElements] = useState<Element[]>([]);
    const currentActiveIndex = useScrollspy(elements, {
-      offsetYPercent: 30,
+      offsetYPercent: 50,
    });
 
    React.useEffect(() => {

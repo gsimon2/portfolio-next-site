@@ -6,23 +6,19 @@ import HeroAvatar from "./HeroAvatar";
 const HeroSection: React.FC = () => {
    return (
       <Container fluid className={classes.container} id="hero">
-         <SimpleGrid cols={{base: 1, sm: 2}} className={classes.grid}>
+         <SimpleGrid cols={{ base: 1, sm: 2 }} className={classes.grid}>
             <Center className={classes.imageCenter}>
                <div className={classes.imageContainer}>
                   <HeroAvatar />
                </div>
             </Center>
             <Center className={classes.heroTextContainer}>
-               <h2>
-                  Hey, I&apos;m Glen! 
-               </h2>
-               <h3>
-                  I do cool things with code.
-               </h3>
+               <h2>Hey, I&apos;m Glen!</h2>
+               <h3>I do cool things with code.</h3>
             </Center>
          </SimpleGrid>
-         <Center>
-            <Button size="xl" href="#about" component='a'>
+         <Center className={classes.buttonContainer}>
+            <Button size="xl" href="#about" component="a">
                Check out my work!
             </Button>
          </Center>

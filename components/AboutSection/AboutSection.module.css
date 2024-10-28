@@ -1,0 +1,35 @@
+.textContainer {
+   display: flex;
+   flex-direction: column;
+}
+
+.skill {
+   padding: 0.5rem;
+   border: 1px solid var(--mantine-primary-color-filled);
+   border-radius: var(--mantine-radius-default);
+   opacity: 0;
+
+   @media (prefers-reduced-motion: reduce) {
+      opacity: 1;
+   }
+}
+
+.skillAppear {
+   @media (prefers-reduced-motion: no-preference) {
+      animation: fadeIn 0.75s ease-in 0s;
+      animation-fill-mode: forwards;
+   }
+}
+
+@keyframes fadeIn {
+   from {
+      opacity: 0;
+   }
+   to {
+      opacity: 1;
+   }
+}
+
+.skillIcon {
+   border-radius: var(--mantine-radius-default);
+}

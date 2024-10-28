@@ -1,10 +1,12 @@
 .container {
    height: calc(100vh - 6rem);
    margin: 1rem;
+   display: flex;
+   flex-direction: column;
 }
 
 .grid {
-   height: 80%;
+   flex-grow: 1;
 }
 
 .imageCenter {
@@ -81,4 +83,8 @@
    @media (max-width: 48em) {
       align-self: flex-start;
    }
+}
+
+.buttonContainer {
+   flex-grow: 1;
 }

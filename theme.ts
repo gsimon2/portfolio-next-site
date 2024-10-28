@@ -24,4 +24,12 @@ export const theme = createTheme({
       lg: "75em",
       xl: "88em",
    },
+   defaultRadius: "md",
+   radius: {
+      xs: "0.125rem",
+      sm: "0.25rem",
+      md: "0.75rem",
+      lg: "1rem",
+      xl: "3rem",
+   },
 });
