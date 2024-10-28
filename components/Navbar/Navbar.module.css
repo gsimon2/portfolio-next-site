@@ -6,6 +6,7 @@
    backdrop-filter: blur(3px);
    z-index: 40;
    margin-bottom: 1rem;
+   border-bottom: 1px solid var(--mantine-primary-color-light);
 }
 
 .group {
@@ -14,11 +15,13 @@
    list-style: none;
    margin-block: 0;
 
-   @container (max-width: 75em) {
+   /* breakpoint lg */
+   @media (max-width: 75em) {
       margin-inline: 2rem;
    }
 
-   @container (max-width: 36em) {
+   /* breakpoint xs */
+   @media (max-width: 36em) {
       margin-inline: 1rem;
       padding: 0.5rem;
    }

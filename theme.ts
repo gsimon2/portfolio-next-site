@@ -1,9 +1,8 @@
 import { createTheme, colorsTuple } from "@mantine/core";
 
 export const theme = createTheme({
-   primaryColor: "gray",
+   primaryColor: "blue",
    colors: {
-      
       "ocean-blue": [
          "#7AD1DD",
          "#5FCCDB",
@@ -17,5 +16,12 @@ export const theme = createTheme({
          "#147885",
       ],
       glass: colorsTuple("rgba(40,40,40,0.92)"),
+   },
+   breakpoints: {
+      xs: "36em",
+      sm: "48em",
+      md: "62em",
+      lg: "75em",
+      xl: "88em",
    },
 });
