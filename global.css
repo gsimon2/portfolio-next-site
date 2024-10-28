@@ -1,15 +1,8 @@
 html {
    scroll-behavior: smooth;
+   scroll-padding-top: 5rem; /* Roughly the height of the navbar */
 }
 
 body {
    background-color: black;
-}
-
-.targetOffset {
-   display: block;
-   position: relative;
-   top: -7rem;
-   visibility: hidden;
-   margin: 0;
 }

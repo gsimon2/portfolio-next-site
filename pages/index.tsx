@@ -13,9 +13,8 @@ export default function IndexPage() {
       <>
          <HeroSection />
          <Navbar />
-         <Container h={5000}>
+         <Container h={5000} id="about">
             <Paper p="xl" withBorder>
-               <span id="about" className='targetOffset'></span>
                <Center>
                   <Group mt={50} justify="center">
                      <Button size="xl">Welcome to Mantine!</Button>
