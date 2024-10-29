@@ -1,11 +1,12 @@
 import { Center, Container, SimpleGrid, Space, Text } from "@mantine/core";
 import React from "react";
 import classes from "./AboutSection.module.css";
-import Skill from "./Skill";
+import SkillsDisplay from './SkillsDisplay';
+import { ElementIds } from '../../constants';
 
 const AboutSection: React.FC = () => {
    return (
-      <Container fluid id="about">
+      <Container fluid id={ElementIds.About} className={classes.sectionContainer}>
          <h2>About Me</h2>
          <SimpleGrid cols={{ base: 1, sm: 2 }} className={classes.grid}>
             <Center className={classes.textContainer}>
@@ -32,28 +33,7 @@ const AboutSection: React.FC = () => {
                <Space h="lg" />
             </Center>
             <Center>
-               <SimpleGrid cols={3} className={classes.skillGrid} id="skill-grid">
-                  <Skill
-                     imgSrc="/assets/skill-icons/javascript.png"
-                     imgAlt="JavaScript"
-                     text="JavaScript"
-                  />
-                  <Skill
-                     imgSrc="/assets/skill-icons/javascript.png"
-                     imgAlt="JavaScript"
-                     text="JavaScript"
-                  />
-                  <Skill
-                     imgSrc="/assets/skill-icons/javascript.png"
-                     imgAlt="JavaScript"
-                     text="JavaScript"
-                  />
-                  <Skill
-                     imgSrc="/assets/skill-icons/javascript.png"
-                     imgAlt="JavaScript"
-                     text="JavaScript"
-                  />
-               </SimpleGrid>
+              <SkillsDisplay />
             </Center>
          </SimpleGrid>
       </Container>

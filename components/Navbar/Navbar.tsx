@@ -14,7 +14,7 @@ const Navbar: React.FC = () => {
 
    React.useEffect(() => {
       const widgetElements = sections.map((section) =>
-         document.querySelector(`${section.id}`)
+         document.querySelector(`#${section.id}`)
       );
 
       setElements(widgetElements as Element[]);
@@ -27,7 +27,7 @@ const Navbar: React.FC = () => {
             {sections.map((section, index) => (
                <li key={section.name}>
                   <Anchor
-                     href={section.id}
+                     href={`#${section.id}`}
                      className={classNames(classes.anchor, {
                         [classes.achorActive]: currentActiveIndex === index,
                      })}

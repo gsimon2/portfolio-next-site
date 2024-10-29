@@ -1,23 +1,33 @@
+.sectionContainer {
+   margin-top: 2rem;
+   margin-bottom: 4rem;
+   max-width: 90rem;
+}
+
 .textContainer {
    display: flex;
    flex-direction: column;
+   margin-inline: 2rem;
+
+   @media (max-width: 48em) {
+      margin-inline: 1rem;
+   }
 }
 
 .skill {
-   padding: 0.5rem;
+   padding-block: 0.5rem;
+   padding-inline: 1rem;
    border: 1px solid var(--mantine-primary-color-filled);
    border-radius: var(--mantine-radius-default);
    opacity: 0;
 
+   @media (max-width: 48em) {
+      padding-inline: 0.5rem;
+   }
+
    @media (prefers-reduced-motion: reduce) {
       opacity: 1;
    }
-
-   /* @media (prefers-reduced-motion: no-preference) {
-      &:hover {
-         transform: scale(1.1);
-      }
-   } */
 }
 
 .skillAppear {
@@ -28,14 +38,26 @@
 }
 
 @keyframes fadeIn {
-   from {
+   0% {
       opacity: 0;
    }
-   to {
+   50% {
+      transform: scale(1.1);
+   }
+   100% {
       opacity: 1;
+      transform: scale(1);
    }
 }
 
 .skillIcon {
    border-radius: var(--mantine-radius-default);
+}
+
+.skillText {
+   text-align: center;
+}
+
+.skillGroup {
+   margin-block: 0.75rem;
 }

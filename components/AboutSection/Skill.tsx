@@ -5,9 +5,10 @@ import Image from "next/image";
 import classes from "./AboutSection.module.css";
 import { useScrollspy } from "../../utils/hooks/useScrollSpy";
 import classNames from "classnames";
-import { randomIntFromInterval } from '../../utils/hooks/randomInt';
+import { randomIntFromInterval } from "../../utils/hooks/randomInt";
+import { ElementIds } from "../../constants";
 
-const Skill: React.FC<ISkillProps> = ({ imgSrc, imgAlt, text }) => {
+const Skill: React.FC<ISkillProps> = ({ imgSrc, text, appearanceDelay }) => {
    const [elements, setElements] = useState<Element[]>([]);
    const [isInView, setIsInView] = useState(false);
    const currentActiveIndex = useScrollspy(elements, {
@@ -16,12 +17,17 @@ const Skill: React.FC<ISkillProps> = ({ imgSrc, imgAlt, text }) => {
 
    useEffect(() => {
       if (currentActiveIndex === 0) {
-         setTimeout(() => setIsInView(true), randomIntFromInterval(25, 500));
+         setTimeout(
+            () => setIsInView(true),
+            appearanceDelay ?? randomIntFromInterval(25, 500)
+         );
       }
-   }, [currentActiveIndex]);
+   }, [appearanceDelay, currentActiveIndex]);
 
    useEffect(() => {
-      setElements([document.querySelector("#skill-grid")] as Element[]);
+      setElements([
+         document.getElementById(ElementIds.skillDisplay),
+      ] as Element[]);
    }, []);
 
    return (
@@ -32,20 +38,20 @@ const Skill: React.FC<ISkillProps> = ({ imgSrc, imgAlt, text }) => {
       >
          <Image
             src={imgSrc}
-            alt={imgAlt}
+            alt={`${text} icon`}
             width={75}
             height={75}
             className={classes.skillIcon}
          />
-         <Text>{text}</Text>
+         <Text className={classes.skillText}>{text}</Text>
       </Box>
    );
 };
 
 export interface ISkillProps {
    imgSrc: string;
-   imgAlt: string;
    text: string;
+   appearanceDelay?: number;
 }
 
 export default Skill;

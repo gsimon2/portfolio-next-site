@@ -2,10 +2,11 @@ import React from "react";
 import { Button, Center, Container, SimpleGrid, Text } from "@mantine/core";
 import classes from "./HeroSection.module.css";
 import HeroAvatar from "./HeroAvatar";
+import { ElementIds } from '../../constants';
 
 const HeroSection: React.FC = () => {
    return (
-      <Container fluid className={classes.container} id="hero">
+      <Container fluid className={classes.container} id={ElementIds.Hero}>
          <SimpleGrid cols={{ base: 1, sm: 2 }} className={classes.grid}>
             <Center className={classes.imageCenter}>
                <div className={classes.imageContainer}>
@@ -18,7 +19,7 @@ const HeroSection: React.FC = () => {
             </Center>
          </SimpleGrid>
          <Center className={classes.buttonContainer}>
-            <Button size="xl" href="#about" component="a">
+            <Button size="xl" href={`#${ElementIds.About}`} component="a">
                Check out my work!
             </Button>
          </Center>
