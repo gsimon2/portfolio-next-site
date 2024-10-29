@@ -1,8 +1,9 @@
-import { Button, Center, Container, Group, Paper } from "@mantine/core";
-import HeroSection from "../components/HeroSection/HeroSection";
+import HeroSection from "../components/Sections/HeroSection/HeroSection";
 import Navbar from "../components/Navbar/Navbar";
-import AboutSection from "../components/AboutSection/AboutSection";
-import { ElementIds } from '../constants';
+import AboutSection from "../components/Sections/AboutSection/AboutSection";
+import ProjectSection from "../components/Sections/ProjectSection/ProjectSection";
+import ExperienceSection from "../components/Sections/ExperienceSection/ExperienceSection";
+import ContactSection from "../components/Sections/ContactSection/ContactSection";
 
 export default function IndexPage() {
    return (
@@ -10,15 +11,9 @@ export default function IndexPage() {
          <HeroSection />
          <Navbar />
          <AboutSection />
-         <Container h={5000} id={ElementIds.Projects}>
-            <Paper p="xl" withBorder>
-               <Center>
-                  <Group mt={50} justify="center">
-                     <Button size="xl">Welcome to Mantine!</Button>
-                  </Group>
-               </Center>
-            </Paper>
-         </Container>
+         <ExperienceSection />
+         <ProjectSection />
+         <ContactSection />
       </>
    );
 }

@@ -6,3 +6,9 @@ html {
 body {
    background-color: black;
 }
+
+.section-container {
+   margin-top: 2rem;
+   margin-bottom: 4rem;
+   max-width: 90rem;
+}

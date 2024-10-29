@@ -2,11 +2,11 @@ import { Center, Container, SimpleGrid, Space, Text } from "@mantine/core";
 import React from "react";
 import classes from "./AboutSection.module.css";
 import SkillsDisplay from './SkillsDisplay';
-import { ElementIds } from '../../constants';
+import { ElementIds } from '../../../constants';
 
 const AboutSection: React.FC = () => {
    return (
-      <Container fluid id={ElementIds.About} className={classes.sectionContainer}>
+      <Container fluid id={ElementIds.About} className="section-container">
          <h2>About Me</h2>
          <SimpleGrid cols={{ base: 1, sm: 2 }} className={classes.grid}>
             <Center className={classes.textContainer}>

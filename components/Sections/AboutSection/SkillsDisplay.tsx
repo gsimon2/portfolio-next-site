@@ -2,7 +2,7 @@ import React from "react";
 import Skill from "./Skill";
 import classes from "./AboutSection.module.css";
 import { Box, Group, SimpleGrid } from "@mantine/core";
-import { ElementIds } from "../../constants";
+import { ElementIds } from "../../../constants";
 
 const SkillsDisplay: React.FC = () => {
    return (

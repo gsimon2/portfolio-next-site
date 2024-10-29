@@ -8,12 +8,14 @@ export enum ElementIds {
    About = "about",
    Projects = "projects",
    Contact = "contact",
+   Experience = "experience",
    skillDisplay = "skill-display"
 }
 
 export const sections: Section[] = [
    { name: "Home", id: ElementIds.Hero },
    { name: "About", id: ElementIds.About },
+   { name: "Experience", id: ElementIds.Experience },
    { name: "Projects", id: ElementIds.Projects },
    { name: "Contact", id: ElementIds.Contact },
 ]

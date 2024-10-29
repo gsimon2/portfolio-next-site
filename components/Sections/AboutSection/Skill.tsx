@@ -3,10 +3,10 @@ import { Box, Text } from "@mantine/core";
 import React, { useEffect, useState } from "react";
 import Image from "next/image";
 import classes from "./AboutSection.module.css";
-import { useScrollspy } from "../../utils/hooks/useScrollSpy";
+import { useScrollspy } from "../../../utils/hooks/useScrollSpy";
 import classNames from "classnames";
-import { randomIntFromInterval } from "../../utils/hooks/randomInt";
-import { ElementIds } from "../../constants";
+import { randomIntFromInterval } from "../../../utils/hooks/randomInt";
+import { ElementIds } from "../../../constants";
 
 const Skill: React.FC<ISkillProps> = ({ imgSrc, text, appearanceDelay }) => {
    const [elements, setElements] = useState<Element[]>([]);
