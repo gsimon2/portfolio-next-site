@@ -30,6 +30,10 @@
 .anchor {
    font-size: var(--mantine-font-size-xl);
 
+   @media (max-width: 48em) {
+      font-size: var(--mantine-font-size-md);
+   }
+
    &:hover {
       box-shadow: 0 4px 0 0 var(--mantine-color-anchor);
       text-decoration: none;
