@@ -1,0 +1,65 @@
+.resumeLinkContainer {
+   display: flex;
+   justify-content: center;
+   font-size: var(--mantine-font-size-xl);
+}
+
+.experienceContainer {
+   margin-inline: 1rem;
+   margin-block: 3rem;
+   flex-direction: column;
+
+   /* breakpoint md */
+   @media screen and (min-width: 62em) {
+      flex-direction: row;
+
+      &:nth-child(even) {
+         justify-content: flex-end;
+      }
+
+      &:nth-child(odd) {
+         justify-content: flex-start;
+      }
+   }
+
+   &:first-child {
+      margin-block-start: 0 !important;
+   }
+
+   /* &:hover {
+      transform: scale(1.05);
+      transition: 0.25s;
+   } */
+}
+
+.date {
+   align-self: center;
+   margin: 2rem;
+   flex-shrink: 0;
+}
+
+.jobTitleHeader {
+   margin-bottom: 0rem;
+}
+
+.jobTitleText {
+   font-size: var(--mantine-font-size-xl);
+}
+
+.pastJobTitle {
+   margin-top: -1rem;
+   filter: brightness(0.75);
+}
+
+.linkedProduct {
+   > svg {
+      height: 1rem;
+   }
+}
+
+.childrenContainer {
+   /* breakpoint md */
+   @media screen and (min-width: 62em) {
+      max-width: 60vw;
+   }
+}

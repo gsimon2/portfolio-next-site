@@ -12,3 +12,16 @@ body {
    margin-bottom: 4rem;
    max-width: 90rem;
 }
+
+.link {
+   color: inherit;
+   text-decoration: none;
+
+   &:hover {
+      text-decoration: underline;
+   }
+}
+
+.externalLinkIcon {
+   margin-inline-start: 0.5rem;
+}
