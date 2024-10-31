@@ -56,6 +56,7 @@ const Experience: React.FC<IExperienceProps> = ({
                {/* linked products */}
                {linkedProducts?.length && (
                   <Group>
+                     <span>Key products:</span>
                      {linkedProducts.map((linkedProduct) => (
                         <Link
                            key={linkedProduct.name}

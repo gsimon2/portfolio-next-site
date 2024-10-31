@@ -62,4 +62,9 @@
    @media screen and (min-width: 62em) {
       max-width: 60vw;
    }
+
+   /* breakpoint xl */
+   @media screen and (min-width: 88em) {
+      max-width: 40vw;
+   }
 }
