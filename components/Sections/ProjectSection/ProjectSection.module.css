@@ -1,0 +1,50 @@
+.projectsContainer {
+   display: flex;
+   flex-direction: column;
+}
+
+.linkContainer {
+   margin-block-start: 4rem;
+   display: flex;
+   justify-content: center;
+   font-size: var(--mantine-font-size-xl);
+}
+
+.card {
+   margin: 1rem;
+   cursor: pointer;
+
+   img {
+      max-height: 25vh;
+   }
+
+   /* breakpoint lg */
+   @media screen and (min-width: 62em) {
+      max-width: 60vw;
+   }
+
+   /* over xl breakpoint */
+   @media screen and (min-width: 110em) {
+      max-width: 45vw;
+   }
+
+   &:nth-child(odd) {
+      align-self: flex-end;
+   }
+
+   &:nth-child(even) {
+      align-self: flex-start;
+   }
+
+   @media (prefers-reduced-motion: no-preference) {
+      &:hover {
+         transform: scale(1.05);
+         transition: 0.25s;
+      }
+   }
+}
+
+.projectTitleText {
+   margin-block: 0.5rem;
+   font-size: var(--mantine-font-size-xl);
+}

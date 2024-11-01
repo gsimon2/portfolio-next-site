@@ -25,3 +25,7 @@ body {
 .externalLinkIcon {
    margin-inline-start: 0.5rem;
 }
+
+.mantine-ScrollArea-scrollbar {
+   z-index: 100;
+}

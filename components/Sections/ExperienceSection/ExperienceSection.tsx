@@ -17,7 +17,7 @@ const ExperienceSection: React.FC = () => {
                pastTitles={["Software Engineer 2"]}
                company="Indeed"
                href="https://www.indeed.com/hire"
-               chips={[
+               badges={[
                   "React",
                   "TypeScript",
                   "Storybook",
@@ -26,7 +26,7 @@ const ExperienceSection: React.FC = () => {
                ]}
             >
                <Text>
-                  Helped led a team of engineers to tackle high-stakes projects
+                  Helped lead a team of engineers to tackle high-stakes projects
                   with agile practices, emphasizing efficiency and effective
                   project management while focusing on both team and product
                   impact. My work included creating a suite of reusable modules
@@ -46,7 +46,7 @@ const ExperienceSection: React.FC = () => {
                pastTitles={["Software Engineer"]}
                company="TechSmith"
                href="https://www.techsmith.com/"
-               chips={["C#", ".NET", "React", "TypeScript", "Storybook"]}
+               badges={["C#", ".NET", "React", "TypeScript", "Storybook"]}
                linkedProducts={[
                   {
                      name: "Screencast",
@@ -81,7 +81,7 @@ const ExperienceSection: React.FC = () => {
                title="Graduate Research Assistant"
                company="Software Engineering and Network Systems Lab - Michigan State University"
                href="https://engineering.msu.edu/about/departments/cse/research#accordionsoftwareengineeringandnetworksystemslaboratory_researchgroupaccordion"
-               chips={["Python", "ROS", "Genetic Algorithms"]}
+               badges={["Python", "ROS", "Genetic Algorithms"]}
             >
                <Text>
                   Served as a Graduate Research Assistant, where I developed
@@ -101,7 +101,7 @@ const ExperienceSection: React.FC = () => {
                rel="noreferrer noopener"
                className="link"
             >
-               Check out my full Resume
+               Check out my full resume
                <IconExternalLink className="externalLinkIcon" stroke={2} />
             </Link>
          </Box>

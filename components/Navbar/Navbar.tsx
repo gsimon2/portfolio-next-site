@@ -20,6 +20,11 @@ const Navbar: React.FC = () => {
       setElements(widgetElements as Element[]);
    }, []);
 
+   const handleClick = (e: React.MouseEvent<HTMLAnchorElement>, id: string) => {
+      e.preventDefault();
+      document.getElementById(id)?.scrollIntoView({ behavior: "smooth",  });
+   }
+
 
    return (
       <nav className={classNames(".navbar", classes.navbar)}>
@@ -28,6 +33,7 @@ const Navbar: React.FC = () => {
                <li key={section.name}>
                   <Anchor
                      href={`#${section.id}`}
+                     onClick={e => handleClick(e, section.id)}
                      className={classNames(classes.anchor, {
                         [classes.achorActive]: currentActiveIndex === index,
                      })}

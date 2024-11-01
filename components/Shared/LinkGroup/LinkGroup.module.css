@@ -1,0 +1,5 @@
+.linkedItem {
+   > svg {
+      height: 1rem;
+   }
+}

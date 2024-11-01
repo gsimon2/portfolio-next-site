@@ -2,7 +2,7 @@ import React from "react";
 import { Button, Center, Container, SimpleGrid, Text } from "@mantine/core";
 import classes from "./HeroSection.module.css";
 import HeroAvatar from "./HeroAvatar";
-import { ElementIds } from '../../../constants';
+import { ElementIds } from "../../../constants";
 
 const HeroSection: React.FC = () => {
    return (
@@ -19,8 +19,15 @@ const HeroSection: React.FC = () => {
             </Center>
          </SimpleGrid>
          <Center className={classes.buttonContainer}>
-            <Button size="xl" href={`#${ElementIds.About}`} component="a">
-               Check out my work!
+            <Button
+               size="xl"
+               onClick={() => {
+                  document
+                     .getElementById(ElementIds.About)
+                     ?.scrollIntoView({ behavior: "smooth" });
+               }}
+            >
+               Learn more about me!
             </Button>
          </Center>
       </Container>

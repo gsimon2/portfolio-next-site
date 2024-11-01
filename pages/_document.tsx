@@ -1,5 +1,5 @@
 import { Html, Head, Main, NextScript } from "next/document";
-import { Box, ColorSchemeScript } from "@mantine/core";
+import { ColorSchemeScript } from "@mantine/core";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 
 export default function Document() {

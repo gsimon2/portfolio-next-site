@@ -1,9 +1,11 @@
-import { Badge, Box, Flex, Group, Stack, Text } from "@mantine/core";
+import { Box, Flex, Stack, Text } from "@mantine/core";
 import React from "react";
 import classes from "./ExperienceSection.module.css";
 import Link from "next/link";
-import { IconExternalLink, IconLink } from "@tabler/icons-react";
+import { IconExternalLink } from "@tabler/icons-react";
 import classNames from "classnames";
+import BadgeDisplay from "../../Shared/BadgeDisplay/BadgeDisplay";
+import LinkGroup, { ILinkedItem } from "../../Shared/LinkGroup/LinkGroup";
 
 const Experience: React.FC<IExperienceProps> = ({
    date,
@@ -13,7 +15,7 @@ const Experience: React.FC<IExperienceProps> = ({
    href,
    children,
    linkedProducts,
-   chips,
+   badges,
 }) => {
    return (
       <Flex className={classes.experienceContainer}>
@@ -40,47 +42,18 @@ const Experience: React.FC<IExperienceProps> = ({
                   </Text>
                ))}
                <Box className={classes.childrenContainer}>{children}</Box>
-               {chips?.length && (
-                  <Group>
-                     {chips.map((chip) => (
-                        <Badge
-                           key={chip}
-                           className={classes.chip}
-                           variant="light"
-                        >
-                           {chip}
-                        </Badge>
-                     ))}
-                  </Group>
-               )}
-               {/* linked products */}
+               {badges?.length && <BadgeDisplay badges={badges} />}
                {linkedProducts?.length && (
-                  <Group>
-                     <span>Key products:</span>
-                     {linkedProducts.map((linkedProduct) => (
-                        <Link
-                           key={linkedProduct.name}
-                           href={linkedProduct.href}
-                           target="_blank"
-                           rel="noreferrer noopener"
-                           className={classNames("link", classes.linkedProduct)}
-                        >
-                           {linkedProduct.name}
-                           <IconLink stroke={2} />
-                        </Link>
-                     ))}
-                  </Group>
+                  <LinkGroup
+                     groupText="Key products:"
+                     linkedItems={linkedProducts}
+                  />
                )}
             </Stack>
          </Box>
       </Flex>
    );
 };
-
-interface ILinkedProduct {
-   name: string;
-   href: string;
-}
 
 export interface IExperienceProps {
    date: string;
@@ -89,8 +62,8 @@ export interface IExperienceProps {
    company: string;
    children: React.ReactNode;
    href: string;
-   linkedProducts?: ILinkedProduct[];
-   chips?: string[];
+   linkedProducts?: ILinkedItem[];
+   badges?: string[];
 }
 
 export default Experience;

@@ -52,12 +52,6 @@
    filter: brightness(0.75);
 }
 
-.linkedProduct {
-   > svg {
-      height: 1rem;
-   }
-}
-
 .childrenContainer {
    /* breakpoint md */
    @media screen and (min-width: 62em) {
