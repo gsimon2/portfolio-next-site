@@ -1,6 +1,5 @@
 html {
    scroll-behavior: smooth;
-   scroll-padding-top: 5rem; /* Roughly the height of the navbar */
 }
 
 body {
@@ -11,6 +10,7 @@ body {
    margin-top: 2rem;
    margin-bottom: 4rem;
    max-width: 90rem;
+   scroll-margin-top: 5rem; /* Roughly the height of the navbar */
 }
 
 .link {
