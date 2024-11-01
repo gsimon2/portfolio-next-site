@@ -96,7 +96,7 @@ const ExperienceSection: React.FC = () => {
          </Box>
          <Box className={classes.resumeLinkContainer}>
             <Link
-               href="/resume"
+               href="https://github.com/gsimon2/Resume2/raw/main/Resume2.pdf"
                target="_blank"
                rel="noreferrer noopener"
                className="link"

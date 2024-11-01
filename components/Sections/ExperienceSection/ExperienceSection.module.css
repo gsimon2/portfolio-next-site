@@ -1,4 +1,5 @@
 .resumeLinkContainer {
+   margin-block-start: 4rem;
    display: flex;
    justify-content: center;
    font-size: var(--mantine-font-size-xl);
