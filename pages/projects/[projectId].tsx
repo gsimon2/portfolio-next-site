@@ -3,6 +3,7 @@ import { useRouter } from "next/router";
 import { ElementIds } from "../../constants";
 import ProjectPage from "../../components/ProjectPage/ProjectPage";
 import { projects } from "../../content/projects";
+import Head from "next/head";
 
 const ProjectIndexPage: React.FC = () => {
    const router = useRouter();
@@ -12,17 +13,22 @@ const ProjectIndexPage: React.FC = () => {
    );
 
    return (
-      <Container fluid className="section-container" id="project-list-page">
-         <ScrollArea type='auto' scrollbars="x" offsetScrollbars>
-            <Breadcrumbs>
-               <Anchor href="/">Home</Anchor>
-               <Anchor href={`/#${ElementIds.Projects}`}>Projects</Anchor>
-               <Anchor href="/projectList">Project List</Anchor>
-               <Anchor href={project?.link}>{project?.title}</Anchor>
-            </Breadcrumbs>
-         </ScrollArea>
-         {project && <ProjectPage {...project} />}
-      </Container>
+      <>
+         <Head>
+            <title>{`${project?.title ?? "project"} | Glen A Simon`}</title>
+         </Head>
+         <Container fluid className="section-container" id="project-list-page">
+            <ScrollArea type="auto" scrollbars="x" offsetScrollbars>
+               <Breadcrumbs>
+                  <Anchor href="/">Home</Anchor>
+                  <Anchor href={`/#${ElementIds.Projects}`}>Projects</Anchor>
+                  <Anchor href="/projectList">Project List</Anchor>
+                  <Anchor href={project?.link}>{project?.title}</Anchor>
+               </Breadcrumbs>
+            </ScrollArea>
+            {project && <ProjectPage {...project} />}
+         </Container>
+      </>
    );
 };
 

@@ -3,7 +3,6 @@ A polished and responsive portfolio website built with Next.js, React, TypeScrip
 
 Feel free to use this template as inspiration for your own portfolio website!
 
-
 ## Author
 Glen Simon
 
