@@ -1,10 +1,11 @@
 "use client";
-import { Anchor, Group } from "@mantine/core";
+import { Anchor, Button, Group, Menu } from "@mantine/core";
 import React, { useState } from "react";
 import classes from "./Navbar.module.css";
 import classNames from "classnames";
-import { sections } from "../../constants";
+import { ElementIds, sections } from "../../constants";
 import { useScrollspy } from "../../utils/hooks/useScrollSpy";
+import { projects } from "../../content/projects";
 
 const Navbar: React.FC = () => {
    const [elements, setElements] = useState<Element[]>([]);
@@ -22,26 +23,84 @@ const Navbar: React.FC = () => {
 
    const handleClick = (e: React.MouseEvent<HTMLAnchorElement>, id: string) => {
       e.preventDefault();
-      document.getElementById(id)?.scrollIntoView({ behavior: "smooth",  });
-   }
-
+      document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
+   };
 
    return (
       <nav className={classNames(".navbar", classes.navbar)}>
-         <Group justify="flex-end" className={classes.group} component={"ul"}>
-            {sections.map((section, index) => (
-               <li key={section.name}>
-                  <Anchor
-                     href={`#${section.id}`}
-                     onClick={e => handleClick(e, section.id)}
+         <Group justify="flex-end" className={classes.group}>
+            <Anchor
+               href={`#${ElementIds.Hero}`}
+               onClick={(e) => handleClick(e, ElementIds.Hero)}
+               className={classNames(classes.anchor, {
+                  [classes.achorActive]: currentActiveIndex === 0,
+               })}
+            >
+               <span>Home</span>
+            </Anchor>
+            <Anchor
+               href={`#${ElementIds.About}`}
+               onClick={(e) => handleClick(e, ElementIds.About)}
+               className={classNames(classes.anchor, {
+                  [classes.achorActive]: currentActiveIndex === 1,
+               })}
+            >
+               <span>About</span>
+            </Anchor>
+            <Anchor
+               href={`#${ElementIds.Experience}`}
+               onClick={(e) => handleClick(e, ElementIds.Experience)}
+               className={classNames(classes.anchor, {
+                  [classes.achorActive]: currentActiveIndex === 2,
+               })}
+            >
+               <span>Experience</span>
+            </Anchor>
+            <Menu>
+               <Menu.Target>
+                  <Button
+                     variant="transparent"
+                     radius={0}
                      className={classNames(classes.anchor, {
-                        [classes.achorActive]: currentActiveIndex === index,
+                        [classes.achorActive]: currentActiveIndex === 3,
                      })}
                   >
-                     <span>{section.name}</span>
-                  </Anchor>
-               </li>
-            ))}
+                     Projects
+                  </Button>
+               </Menu.Target>
+               <Menu.Dropdown>
+                  <Menu.Item
+                     component="a"
+                     href={`#${ElementIds.Projects}`}
+                     onClick={(e) => handleClick(e, ElementIds.Projects)}
+                  >
+                     Top Projects
+                  </Menu.Item>
+                  <Menu.Item component="a" href="/projectList">
+                     All Projects
+                  </Menu.Item>
+                  <Menu.Divider />
+                  <Menu.Label>Individual Projects</Menu.Label>
+                  {projects.map((project) => (
+                     <Menu.Item
+                        component="a"
+                        href={project.link}
+                        key={project.id}
+                     >
+                        {project.title}
+                     </Menu.Item>
+                  ))}
+               </Menu.Dropdown>
+            </Menu>
+            <Anchor
+               href={`#${ElementIds.Contact}`}
+               onClick={(e) => handleClick(e, ElementIds.Contact)}
+               className={classNames(classes.anchor, {
+                  [classes.achorActive]: currentActiveIndex === 4,
+               })}
+            >
+               <span>Contact</span>
+            </Anchor>
          </Group>
       </nav>
    );

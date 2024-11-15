@@ -29,6 +29,9 @@
 
 .anchor {
    font-size: var(--mantine-font-size-xl);
+   font-weight: normal;
+   padding: 0;
+   color: var(--mantine-color-anchor) !important;
 
    @media (max-width: 48em) {
       font-size: var(--mantine-font-size-md);
