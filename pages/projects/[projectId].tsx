@@ -19,7 +19,7 @@ const ProjectIndexPage: React.FC = () => {
             <title>{`${project?.title ?? "project"} | Glen A Simon`}</title>
          </Head>
          <Navbar />
-         <Container fluid className="section-container" id="project-list-page">
+         <Container fluid className="section-container" id={ElementIds.projectPage}>
             <ScrollArea type="auto" scrollbars="x" offsetScrollbars>
                <Breadcrumbs>
                   <Anchor href="/">Home</Anchor>

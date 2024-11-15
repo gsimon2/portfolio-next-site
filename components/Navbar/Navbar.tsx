@@ -20,6 +20,9 @@ const Navbar: React.FC = () => {
          document.querySelector(`#${section.id}`)
       );
 
+      widgetElements.push(document.getElementById(ElementIds.projectListPage));
+      widgetElements.push(document.getElementById(ElementIds.projectPage));
+
       setElements(widgetElements as Element[]);
    }, []);
 
@@ -65,17 +68,18 @@ const Navbar: React.FC = () => {
                   <Button
                      variant="transparent"
                      radius={0}
+                     bd={"none"}
                      className={classNames(classes.anchor, {
-                        [classes.achorActive]: currentActiveIndex === 3,
+                        [classes.achorActive]: [3,5,6].includes(currentActiveIndex),
                      })}
                   >
                      Projects
                   </Button>
                </Menu.Target>
-               <Menu.Dropdown>
+               <Menu.Dropdown className={classes.menuDropdown}>
                   <Menu.Item
                      component="a"
-                     href={`#${ElementIds.Projects}`}
+                     href={`/#${ElementIds.Projects}`}
                      onClick={(e) => handleClick(e, ElementIds.Projects)}
                   >
                      Top Projects

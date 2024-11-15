@@ -32,6 +32,7 @@
    font-weight: normal;
    padding: 0;
    color: var(--mantine-color-anchor) !important;
+   height: 1.75rem;
 
    @media (max-width: 48em) {
       font-size: var(--mantine-font-size-md);
@@ -45,4 +46,8 @@
 
 .achorActive {
    box-shadow: 0 4px 0 0 var(--mantine-color-anchor);
+}
+
+.menuDropdown {
+   max-width: min(90vw, 450px);
 }

@@ -9,7 +9,9 @@ export enum ElementIds {
    Projects = "projects",
    Contact = "contact",
    Experience = "experience",
-   skillDisplay = "skill-display"
+   skillDisplay = "skill-display",
+   projectListPage = "project-list-page",
+   projectPage = "project-page",
 }
 
 export const sections: Section[] = [

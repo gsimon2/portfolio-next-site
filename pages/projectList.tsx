@@ -13,7 +13,7 @@ const ProjectListPage: React.FC = () => {
             <title>Project List | Glen A Simon</title>
          </Head>
          <Navbar />
-         <Container fluid className="section-container" id="project-list-page">
+         <Container fluid className="section-container" id={ElementIds.projectListPage}>
             <Breadcrumbs>
                <Anchor href="/">Home</Anchor>
                <Anchor href={`/#${ElementIds.Projects}`}>Projects</Anchor>
