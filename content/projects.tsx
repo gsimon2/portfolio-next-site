@@ -28,7 +28,7 @@ export const projects: IProject[] = [
       id: "portfolio_next_site",
       year: "2024",
       title: "Modern Portfolio Website",
-      link: "projects/portfolio_next_site",
+      link: "/projects/portfolio_next_site",
       body: (
          <>
             <Text>
@@ -72,7 +72,7 @@ export const projects: IProject[] = [
       isTopProject: true,
       year: "2021 - Now",
       title: "Foundry VTT Modules",
-      link: "projects/foundry_modules",
+      link: "/projects/foundry_modules",
       badges: [
          "Javascript",
          "Handlebars",
@@ -416,7 +416,7 @@ export const projects: IProject[] = [
       isTopProject: true,
       year: "2024",
       title: "Lyons BJJ Academy Website",
-      link: "projects/lyons_bjj_website",
+      link: "/projects/lyons_bjj_website",
       images: ["/assets/projects/lyons-bjj.png"],
       body: (
          <>
@@ -465,7 +465,7 @@ export const projects: IProject[] = [
       isTopProject: true,
       year: "2024",
       title: "Superior Plumbing Service Website",
-      link: "projects/superior_plumbing_mt",
+      link: "/projects/superior_plumbing_mt",
       body: (
          <>
             <Text>
@@ -583,7 +583,7 @@ export const projects: IProject[] = [
       isTopProject: true,
       year: "2022",
       title: "Twitch Stream Watcher Script",
-      link: "projects/twitch_stream_watcher_script",
+      link: "/projects/twitch_stream_watcher_script",
       body: (
          <Box>
             <Text>
@@ -654,7 +654,7 @@ export const projects: IProject[] = [
       id: "portfolio_website_v1",
       year: "2021",
       title: "Portfolio Website V1",
-      link: "projects/portfolio_website_v1",
+      link: "/projects/portfolio_website_v1",
       body: (
          <>
             <Text>

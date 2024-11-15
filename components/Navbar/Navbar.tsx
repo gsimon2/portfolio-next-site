@@ -6,8 +6,10 @@ import classNames from "classnames";
 import { ElementIds, sections } from "../../constants";
 import { useScrollspy } from "../../utils/hooks/useScrollSpy";
 import { projects } from "../../content/projects";
+import { useRouter } from "next/router";
 
 const Navbar: React.FC = () => {
+   const router = useRouter();
    const [elements, setElements] = useState<Element[]>([]);
    const currentActiveIndex = useScrollspy(elements, {
       offsetYPercent: 50,
@@ -22,15 +24,17 @@ const Navbar: React.FC = () => {
    }, []);
 
    const handleClick = (e: React.MouseEvent<HTMLAnchorElement>, id: string) => {
-      e.preventDefault();
-      document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
+      if ((router.route === "/")) {
+         e.preventDefault();
+         document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
+      }
    };
 
    return (
       <nav className={classNames(".navbar", classes.navbar)}>
          <Group justify="flex-end" className={classes.group}>
             <Anchor
-               href={`#${ElementIds.Hero}`}
+               href={`/#${ElementIds.Hero}`}
                onClick={(e) => handleClick(e, ElementIds.Hero)}
                className={classNames(classes.anchor, {
                   [classes.achorActive]: currentActiveIndex === 0,
@@ -39,7 +43,7 @@ const Navbar: React.FC = () => {
                <span>Home</span>
             </Anchor>
             <Anchor
-               href={`#${ElementIds.About}`}
+               href={`/#${ElementIds.About}`}
                onClick={(e) => handleClick(e, ElementIds.About)}
                className={classNames(classes.anchor, {
                   [classes.achorActive]: currentActiveIndex === 1,
@@ -48,7 +52,7 @@ const Navbar: React.FC = () => {
                <span>About</span>
             </Anchor>
             <Anchor
-               href={`#${ElementIds.Experience}`}
+               href={`/#${ElementIds.Experience}`}
                onClick={(e) => handleClick(e, ElementIds.Experience)}
                className={classNames(classes.anchor, {
                   [classes.achorActive]: currentActiveIndex === 2,
@@ -93,7 +97,7 @@ const Navbar: React.FC = () => {
                </Menu.Dropdown>
             </Menu>
             <Anchor
-               href={`#${ElementIds.Contact}`}
+               href={`/#${ElementIds.Contact}`}
                onClick={(e) => handleClick(e, ElementIds.Contact)}
                className={classNames(classes.anchor, {
                   [classes.achorActive]: currentActiveIndex === 4,

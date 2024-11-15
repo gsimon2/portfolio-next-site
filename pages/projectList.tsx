@@ -4,6 +4,7 @@ import { ElementIds } from "../constants";
 import BadgeDisplay from "../components/Shared/BadgeDisplay/BadgeDisplay";
 import { projects } from "../content/projects";
 import Head from "next/head";
+import Navbar from '../components/Navbar/Navbar';
 
 const ProjectListPage: React.FC = () => {
    return (
@@ -11,6 +12,7 @@ const ProjectListPage: React.FC = () => {
          <Head>
             <title>Project List | Glen A Simon</title>
          </Head>
+         <Navbar />
          <Container fluid className="section-container" id="project-list-page">
             <Breadcrumbs>
                <Anchor href="/">Home</Anchor>

@@ -4,6 +4,7 @@ import { ElementIds } from "../../constants";
 import ProjectPage from "../../components/ProjectPage/ProjectPage";
 import { projects } from "../../content/projects";
 import Head from "next/head";
+import Navbar from '../../components/Navbar/Navbar';
 
 const ProjectIndexPage: React.FC = () => {
    const router = useRouter();
@@ -17,6 +18,7 @@ const ProjectIndexPage: React.FC = () => {
          <Head>
             <title>{`${project?.title ?? "project"} | Glen A Simon`}</title>
          </Head>
+         <Navbar />
          <Container fluid className="section-container" id="project-list-page">
             <ScrollArea type="auto" scrollbars="x" offsetScrollbars>
                <Breadcrumbs>
