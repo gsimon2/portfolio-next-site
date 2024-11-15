@@ -29,3 +29,12 @@ body {
 .mantine-ScrollArea-scrollbar {
    z-index: 100;
 }
+
+.data-table-row {
+   cursor: pointer;
+   text-align: center;
+}
+
+.table-header {
+   text-align: center;
+}

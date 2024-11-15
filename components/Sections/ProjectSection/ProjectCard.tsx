@@ -27,7 +27,7 @@ const ProjectCard: React.FC<IProject> = ({
       >
          <Card.Section>
             {images?.length && (
-               <MantineImage src={images[0]} alt="Project image" fetchPriority='high' />
+               <MantineImage src={images[0]} alt="Project image" />
             )}
          </Card.Section>
 

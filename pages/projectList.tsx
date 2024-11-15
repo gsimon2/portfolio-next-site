@@ -3,7 +3,7 @@ import React from "react";
 import { ElementIds } from "../constants";
 import BadgeDisplay from "../components/Shared/BadgeDisplay/BadgeDisplay";
 import { projects } from "../content/projects";
-import Head from 'next/head';
+import Head from "next/head";
 
 const ProjectListPage: React.FC = () => {
    return (
@@ -28,17 +28,19 @@ const ProjectListPage: React.FC = () => {
                   <Table.Caption>My recent projects</Table.Caption>
                   <Table.Thead>
                      <Table.Tr>
-                        <Table.Th>Year</Table.Th>
-                        <Table.Th>Project</Table.Th>
-                        <Table.Th>Highlights</Table.Th>
-                        <Table.Th>Link</Table.Th>
+                        <Table.Th className="table-header">Year</Table.Th>
+                        <Table.Th className="table-header">Project</Table.Th>
+                        <Table.Th className="table-header">
+                           Highlights
+                        </Table.Th>
+                        <Table.Th className="table-header">Link</Table.Th>
                      </Table.Tr>
                   </Table.Thead>
                   <Table.Tbody>
                      {projects.map((project) => (
                         <Table.Tr
                            key={project.title}
-                           style={{ cursor: "pointer", textAlign: "center" }}
+                           className="data-table-row"
                            onClick={() => (window.location.href = project.link)}
                            my="sm"
                         >

@@ -12,9 +12,10 @@ import { notifications } from "@mantine/notifications";
 const ContactSection: React.FC = () => {
    const variant = "outline";
    const size = "xl";
+   const contactEmail = "glen.a.simon@gmail.com";
 
    const handleClick = () => {
-      navigator.clipboard.writeText("glen.a.simon@gmail.com");
+      navigator.clipboard.writeText(contactEmail);
       notifications.show({
          title: "Email Copied",
          message: "Email copied to clipboard",
@@ -28,7 +29,7 @@ const ContactSection: React.FC = () => {
             <Group>
                <ActionIcon
                   component="a"
-                  href="mailto:glen.a.simon@gmail.com"
+                  href={`mailto:${contactEmail}`}
                   onClick={handleClick}
                   variant={variant}
                   size={size}
