@@ -29,6 +29,7 @@ const ContactSection: React.FC = () => {
             <Group>
                <ActionIcon
                   component="a"
+                  target="_blank"
                   href={`mailto:${contactEmail}`}
                   onClick={handleClick}
                   variant={variant}
@@ -38,6 +39,7 @@ const ContactSection: React.FC = () => {
                </ActionIcon>
                <ActionIcon
                   component="a"
+                  target="_blank"
                   href="https://github.com/gsimon2"
                   variant={variant}
                   size={size}
@@ -46,6 +48,7 @@ const ContactSection: React.FC = () => {
                </ActionIcon>
                <ActionIcon
                   component="a"
+                  target="_blank"
                   href="https://www.linkedin.com/in/glen-a-simon/"
                   variant={variant}
                   size={size}
