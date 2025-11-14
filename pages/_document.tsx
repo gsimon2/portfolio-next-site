@@ -5,7 +5,7 @@ export default function Document() {
    return (
       <Html lang="en">
          <Head>
-            <ColorSchemeScript />
+            <ColorSchemeScript defaultColorScheme="dark" />
             <meta
                name="description"
                content="Glen A Simon's modern portfolio showcasing professional software development projects and expertise in Next.js, React, TypeScript, and full-stack development. View live demos and detailed technical implementations."
