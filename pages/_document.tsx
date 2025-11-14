@@ -5,7 +5,7 @@ export default function Document() {
    return (
       <Html lang="en">
          <Head>
-            <ColorSchemeScript />
+            <ColorSchemeScript defaultColorScheme="dark" />
             <meta
                name="description"
                content="Glen A Simon's modern portfolio showcasing professional software development projects and expertise in Next.js, React, TypeScript, and full-stack development. View live demos and detailed technical implementations."
@@ -42,10 +42,6 @@ export default function Document() {
 
             {/* <!-- Additional SEO --> */}
             <meta name="robots" content="index, follow" />
-            <meta
-               name="viewport"
-               content="width=device-width, initial-scale=1.0"
-            />
             <link rel="canonical" href="https://www.glenasimon.com" />
             <link rel="shortcut icon" href="/favicon.png" />
             <link

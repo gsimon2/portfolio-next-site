@@ -12,7 +12,7 @@ export const useScrollspy = (
 
    const rootMargin = `0px 0px -${options?.offsetYPercent ?? 0}% 0px`;
 
-   const observer = useRef<IntersectionObserver>();
+   const observer = useRef<IntersectionObserver | null>(null);
 
    useEffect(() => {
       if (observer.current) {
@@ -41,10 +41,10 @@ export const useScrollspy = (
 
       // observe all the elements passed as argument of the hook
       elements.forEach((element) =>
-         element ? ourObserver.observe(element) : null
+         element && ourObserver ? ourObserver.observe(element) : null
       );
 
-      return () => ourObserver.disconnect();
+      return () => ourObserver?.disconnect();
    }, [elements, options, rootMargin]);
 
    return currentIntersectingElementIndex;

@@ -13,8 +13,8 @@ const ExperienceSection: React.FC = () => {
          <Box>
             <Experience
                date="2022 - Present"
-               title="Senior Software Engineer"
-               pastTitles={["Software Engineer 2"]}
+               title="Senior Software Engineer - Tech Lead"
+               pastTitles={["Senior Software Engineer", "Software Engineer 2"]}
                company="Indeed"
                href="https://www.indeed.com/hire"
                badges={[
