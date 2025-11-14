@@ -38,7 +38,7 @@ const Navbar: React.FC = () => {
          <Group justify="flex-end" className={classes.group}>
             <Anchor
                href={`/#${ElementIds.Hero}`}
-               onClick={(e) => handleClick(e, ElementIds.Hero)}
+               onClick={(e: React.MouseEvent<HTMLAnchorElement>) => handleClick(e, ElementIds.Hero)}
                className={classNames(classes.anchor, {
                   [classes.achorActive]: currentActiveIndex === 0,
                })}
@@ -47,7 +47,7 @@ const Navbar: React.FC = () => {
             </Anchor>
             <Anchor
                href={`/#${ElementIds.About}`}
-               onClick={(e) => handleClick(e, ElementIds.About)}
+               onClick={(e: React.MouseEvent<HTMLAnchorElement>) => handleClick(e, ElementIds.About)}
                className={classNames(classes.anchor, {
                   [classes.achorActive]: currentActiveIndex === 1,
                })}
@@ -56,7 +56,7 @@ const Navbar: React.FC = () => {
             </Anchor>
             <Anchor
                href={`/#${ElementIds.Experience}`}
-               onClick={(e) => handleClick(e, ElementIds.Experience)}
+               onClick={(e: React.MouseEvent<HTMLAnchorElement>) => handleClick(e, ElementIds.Experience)}
                className={classNames(classes.anchor, {
                   [classes.achorActive]: currentActiveIndex === 2,
                })}
@@ -80,7 +80,7 @@ const Navbar: React.FC = () => {
                   <Menu.Item
                      component="a"
                      href={`/#${ElementIds.Projects}`}
-                     onClick={(e) => handleClick(e, ElementIds.Projects)}
+                     onClick={(e: React.MouseEvent<HTMLAnchorElement>) => handleClick(e, ElementIds.Projects)}
                   >
                      Top Projects
                   </Menu.Item>
@@ -102,7 +102,7 @@ const Navbar: React.FC = () => {
             </Menu>
             <Anchor
                href={`/#${ElementIds.Contact}`}
-               onClick={(e) => handleClick(e, ElementIds.Contact)}
+               onClick={(e: React.MouseEvent<HTMLAnchorElement>) => handleClick(e, ElementIds.Contact)}
                className={classNames(classes.anchor, {
                   [classes.achorActive]: currentActiveIndex === 4,
                })}

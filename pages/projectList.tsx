@@ -54,7 +54,7 @@ const ProjectListPage: React.FC = () => {
                            <Table.Td px="lg">
                               <Anchor
                                  href={project.link}
-                                 onClick={(e) => e.stopPropagation()}
+                                 onClick={(e: React.MouseEvent<HTMLAnchorElement>) => e.stopPropagation()}
                               >
                                  View
                               </Anchor>
