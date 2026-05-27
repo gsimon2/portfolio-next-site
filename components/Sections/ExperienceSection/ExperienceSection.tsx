@@ -13,8 +13,8 @@ const ExperienceSection: React.FC = () => {
          <Box>
             <Experience
                date="2022 - Present"
-               title="Senior Software Engineer - Tech Lead"
-               pastTitles={["Senior Software Engineer", "Software Engineer 2"]}
+               title="Staff Software Engineer - Tech Lead"
+               pastTitles={["Senior Software Engineer - Tech Lead", "Senior Software Engineer", "Software Engineer 2"]}
                company="Indeed"
                href="https://www.indeed.com/hire"
                badges={[
@@ -26,18 +26,16 @@ const ExperienceSection: React.FC = () => {
                ]}
             >
                <Text>
-                  Helped lead a team of engineers to tackle high-stakes projects
-                  with agile practices, emphasizing efficiency and effective
-                  project management while focusing on both team and product
-                  impact. My work included creating a suite of reusable modules
-                  that improved job search functionality across over 15 product
-                  surfaces, serving an average of 5 million sessions each week
-                  with exceptional reliability. I encouraged continuous learning
-                  through code pairing, technical deep dive presentations, and
-                  open office sessions, supporting team development. Through
-                  collaborative cross-team efforts and real-time data insights,
-                  I helped deliver quality-driven, scalable solutions for
-                  business-critical initiatives.
+                  Tech Lead for Indeed's Job Management team — engineers building the micro-frontends that roughly 1
+                  million employers use each week to find, organize, and post their jobs. I designed the @proctor GraphQL
+                  directive, a client-side pattern for feature-flagging fields in GraphQL queries (adopted across teams,
+                  eliminating a class of production incidents), and built scopeSha for zero-config deployment visibility
+                  in DataDog RUM across Indeed's frontend teams. I also lead jobman-common, a suite of pipeline tooling
+                  and enhancements used across our 30+ team repos. My work spans architectural stewardship —
+                  observability, SLOs, incident response — and engineering enablement. I invest in the engineers around me
+                  through code review, pairing sessions, design reviews, whiteboards, and 1:1 mentorship. My deepest
+                  expertise is in GraphQL/Apollo, micro-frontend architecture, A/B testing, and AI-assisted developer
+                  tooling.
                </Text>
             </Experience>
             <Experience
