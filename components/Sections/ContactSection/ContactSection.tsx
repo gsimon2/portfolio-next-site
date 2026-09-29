@@ -34,6 +34,7 @@ const ContactSection: React.FC = () => {
                   onClick={handleClick}
                   variant={variant}
                   size={size}
+                  aria-label="Email"
                >
                   <IconMail />
                </ActionIcon>
@@ -43,6 +44,7 @@ const ContactSection: React.FC = () => {
                   href="https://github.com/gsimon2"
                   variant={variant}
                   size={size}
+                  aria-label="GitHub"
                >
                   <IconBrandGithub />
                </ActionIcon>
@@ -52,6 +54,7 @@ const ContactSection: React.FC = () => {
                   href="https://www.linkedin.com/in/glen-a-simon/"
                   variant={variant}
                   size={size}
+                  aria-label="LinkedIn"
                >
                   <IconBrandLinkedin />
                </ActionIcon>
