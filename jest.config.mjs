@@ -19,6 +19,7 @@ const config = {
       "!pages/_document.tsx",
       "!**/*.d.ts",
    ],
+   coverageReporters: ["text", "lcov", "json-summary"],
 };
 
 export default createJestConfig(config);
